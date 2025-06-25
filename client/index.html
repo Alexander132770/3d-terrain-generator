@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Terrain Generator - Laboratory Work #1</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: 'Inter', sans-serif;
+        background: #000;
+      }
+      
+      #root {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      
+      canvas {
+        display: block;
+        touch-action: none;
+      }
+      
+      .ui-overlay {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 20px;
+        color: white;
+        font-size: 14px;
+        min-width: 300px;
+      }
+      
+      .ui-overlay h3 {
+        margin: 0 0 15px 0;
+        color: #4CAF50;
+      }
+      
+      .control-group {
+        margin-bottom: 15px;
+      }
+      
+      .control-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+      
+      .control-group input, .control-group select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #444;
+        border-radius: 5px;
+        background: #222;
+        color: white;
+        font-size: 14px;
+      }
+      
+      .control-group button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: #4CAF50;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      
+      .control-group button:hover {
+        background: #45a049;
+      }
+      
+      .control-group button:disabled {
+        background: #666;
+        cursor: not-allowed;
+      }
+      
+      .checkbox-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      .checkbox-group input[type="checkbox"] {
+        width: auto;
+      }
+      
+      .stats {
+        font-size: 12px;
+        color: #aaa;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #444;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
